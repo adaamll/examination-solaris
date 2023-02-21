@@ -1,3 +1,5 @@
+![poster](./poster.png)
+
 [Project URL](https://solaris-system.netlify.app)
 
 # Solaris
