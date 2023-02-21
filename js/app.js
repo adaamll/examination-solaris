@@ -4,7 +4,6 @@ let currentPlanetIndex = 0;
 
 const nextBtn = document.getElementById('next-btn');
 const backBtn = document.getElementById('back-btn');
-const overlayEl = document.getElementById('overlay');
 const closeBtn = document.getElementById('home-page');
 const searchBtn = document.getElementById('search-btn');
 const planetEl = document.getElementById('planet-container');
@@ -14,7 +13,7 @@ nextBtn.addEventListener('click', nextPlanet);
 backBtn.addEventListener('click', previousPlanet);
 searchBtn.addEventListener('click', searchPlanet);
 planetEl.addEventListener('click', handlePlanetClick);
-closeBtn.addEventListener('click', () => (overlayEl.style.display = 'none'));
+closeBtn.addEventListener('click', () => location.reload());
 
 // FUNCTION THAT FINDS THE CORRECT DATA FOR THE PLANET CLICKED
 function handlePlanetClick(e) {
@@ -30,6 +29,8 @@ function handlePlanetClick(e) {
 // FUNCTION TO SEARCH FOR PLANET ON HOMEPAGE AND RENDERS THE SEARCHED PLANET
 function searchPlanet(e) {
   e.preventDefault();
+
+  const wrongSearchEl = document.getElementById('search-error-msg');
   const searchInput = document.getElementById('search-bar');
   const searchString = searchInput.value.toLowerCase().trim();
   const planets = dataGlobal.find(planet => planet.name.toLowerCase() === searchString);
@@ -37,7 +38,9 @@ function searchPlanet(e) {
   if (planets) {
     currentPlanetIndex = dataGlobal.indexOf(planets);
     renderOverlay(planets);
-    searchInput.value = '';
+  } else {
+    let wrongSearchHtml = `Det finns ingen planet med det namnet, försök igen!`;
+    wrongSearchEl.textContent = wrongSearchHtml;
   }
 }
 

@@ -137,6 +137,7 @@ body {
   display: flex;
   justify-content: center;
   margin-top: 10em;
+  text-align: center;
 }
 
 .search-bar {
@@ -146,10 +147,10 @@ body {
   padding: 0.8em;
   font-family: inherit;
   font-size: 1.2rem;
-  margin-right: 0.5em;
   border-radius: 5px;
   border-style: none;
   width: 300px;
+  margin: 0 0.5em 0.5em 0;
 }
 
 .search-bar::placeholder {
