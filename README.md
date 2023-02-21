@@ -1,4 +1,4 @@
-![poster](./poster.png)
+[Project URL](https://solaris-system.netlify.app)
 
 # Solaris
 En webbplats byggd med HTML, CSS & vanilla JS om vårt solsystem.
