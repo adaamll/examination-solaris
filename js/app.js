@@ -34,7 +34,7 @@ function searchPlanet(e) {
   const searchInput = document.getElementById('search-bar');
   const searchString = searchInput.value.toLowerCase().trim();
   const planets = dataGlobal.find(planet => planet.name.toLowerCase() === searchString);
-
+  searchInput.value = '';
   if (planets) {
     currentPlanetIndex = dataGlobal.indexOf(planets);
     renderOverlay(planets);
