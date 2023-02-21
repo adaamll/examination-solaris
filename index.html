@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Solsystemet - Solaris</title>
+  </head>
+  <body>
+    <div class="overlay" id="overlay">
+      <button class="home-page-btn btn" id="home-page">
+        <i class="fa-solid fa-chevron-left"></i> startsidan
+      </button>
+      <div class="overlay-wrapper" id="overlay-wrapper"></div>
+      <div class="overlay-btns">
+        <button class="pagination-btn btn" id="back-btn">
+          <i class="fa-solid fa-chevron-left"></i> Föregående
+        </button>
+        <button class="pagination-btn btn" id="next-btn">
+          Nästa <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+    <div class="wrapper">
+      <header class="header">
+        <h1 class="heading">SOLSYSTMET</h1>
+        <h3 class="subheading">SOLARIS</h3>
+      </header>
+
+      <main class="planet-container" id="planet-container">
+        <div class="sun" id="solen"></div>
+        <div class="mercury" id="merkurius"></div>
+        <div class="venus" id="venus"></div>
+        <div class="earth" id="jorden"></div>
+        <div class="mars" id="mars"></div>
+        <div class="jupiter" id="jupiter"></div>
+        <div class="saturnus" id="saturnus">
+          <div class="saturnus-ring"></div>
+        </div>
+        <div class="uranus" id="uranus"></div>
+        <div class="neptune" id="neptunus"></div>
+      </main>
+
+      <footer class="footer">
+        <form autocomplete="off">
+          <input
+            id="search-bar"
+            class="search-bar"
+            type="text"
+            placeholder="Sök på en planet..."
+          />
+          <button class="search-btn btn" id="search-btn">Sök planet 🚀</button>
+        </form>
+      </footer>
+    </div>
+    <script src="/js/app.js" type="module"></script>
+    <script
+      src="https://kit.fontawesome.com/9195bb0fc1.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
