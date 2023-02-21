@@ -1,4 +1,4 @@
-import { renderOverlay } from '/js/utils.js';
+import { renderOverlay } from '/js/render.js';
 import { dataGlobal } from '/js/data.js';
 let currentPlanetIndex = 0;
 
