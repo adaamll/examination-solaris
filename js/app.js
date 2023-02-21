@@ -43,11 +43,13 @@ function searchPlanet(e) {
 
 // FUNCTIONS TO RENDER NEXT & PREVIOUS PLANET IN PAGINATION
 function nextPlanet() {
+  // INCREMENTS currentPlanetIndex BY 1 AND USES THE MODULO OPERATOR TO WRAP AROUND TO THE BEGINNING OF THE ARRAY WHEN THE END IS REACHED
   currentPlanetIndex = (currentPlanetIndex + 1) % dataGlobal.length;
   renderOverlay(dataGlobal[currentPlanetIndex]);
 }
 
 function previousPlanet() {
+  // DECREMENTS currentPlanetIndex BY 1 AND USES THE MODULO OPERATOR TO WRAP AROUND TO THE BEGINNING OF THE ARRAY WHEN THE END IS REACHED
   currentPlanetIndex = (currentPlanetIndex - 1 + dataGlobal.length) % dataGlobal.length;
   renderOverlay(dataGlobal[currentPlanetIndex]);
 }
