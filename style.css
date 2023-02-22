@@ -25,6 +25,12 @@ body::-webkit-scrollbar,
   display: none;
 }
 
+body,
+.overlay {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 /* HEADER SECTION */
 
 .header {
